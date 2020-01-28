@@ -163,7 +163,7 @@ $this->setFrameMode(true);
 		"FORM_ID" => "calc_form_feedback",
 		"IBLOCK_ID" => "12",
 		"IBLOCK_TYPE" => "vilka_feedback",
-		"MAIL_TITLE" => GetMessage('FORM_RASCH').' '.$_SERVER['HTTP_HOST'],
+		"MAIL_TITLE" => GetMessage('FORM_RASCH_CALC').' '.$_SERVER['HTTP_HOST'],
 		"OK_TEXT" => GetMessage('FORM_SPASIBO'),
 		"USER_MAIL" => "FORM_MAIL",
 		"USER_NAME" => "FORM_NAME",
@@ -171,5 +171,29 @@ $this->setFrameMode(true);
 		"USE_CAPTCHA" => "Y"
 	)
 );?>
+</div>
+<div class="order_calculator_ipoteka">
+    <div class="popformzag"><?=GetMessage('FORM_ORDER_IPOTEKA')?></div>
+    <?$APPLICATION->IncludeComponent(
+        "vilka:feedback",
+        "bootstrap",
+        Array(
+            "AJAX_MODE" => "Y",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "EMAIL_TO" => COption::GetOptionString('main','email_from'),
+            "FORM_ID" => "ipoteka_form_feedback",
+            "IBLOCK_ID" => "13",
+            "IBLOCK_TYPE" => "vilka_feedback",
+            "MAIL_TITLE" => GetMessage('FORM_RASCH_IPOTEKA').' '.$_SERVER['HTTP_HOST'],
+            "OK_TEXT" => GetMessage('FORM_SPASIBO'),
+            "USER_MAIL" => "FORM_MAIL",
+            "USER_NAME" => "FORM_NAME",
+            "USER_PHONE" => "FORM_PHONE",
+            "USE_CAPTCHA" => "Y"
+        )
+    );?>
 </div>
 </div>

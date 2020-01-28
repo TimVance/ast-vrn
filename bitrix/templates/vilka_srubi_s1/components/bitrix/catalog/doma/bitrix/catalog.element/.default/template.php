@@ -167,8 +167,8 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     <div class="price-inner">
                         <div class="price-caption"><?= GetMessage("VR_PRICE") ?>:</div>
                         <div data="<?=$sum["VALUE"]?>" class="sum"><span><?=number_format($sum["VALUE"], 0, '', ' ')?></span> <?= GetMessage("VR_VALUTE") ?></div>
-                        <button data-message="ќформление за€вки" class="zz_btn"><?= GetMessage("VR_ORDER") ?></button><br>
-                        <button data-message="Ётот дом в ипотеку" class="zz_btn ipoteka-button"><?= GetMessage("VR_ORDER_IPOTEKA") ?></button>
+                        <button class="zz_btn order-button"><?= GetMessage("VR_ORDER") ?></button><br>
+                        <button class="zz_btn ipoteka-button"><?= GetMessage("VR_ORDER_IPOTEKA") ?></button>
                     </div>
                 </div>
             </div>

@@ -63,8 +63,7 @@ $(function(){
         return false;
     });
 
-    $('.calculator .zz_btn').on('click', function(){
-        $('.order_calculator .popformzag').text($(this).attr("data-message"));
+    $('.calculator .order-button').on('click', function(){
         var project = $('h1').text();
         $('.order_calculator #FORM_PROJECT_FID_calc_form_feedback').val(project);
         $.fancybox({
@@ -78,6 +77,23 @@ $(function(){
             complect += $(this).parent().find(".name").text() + '; ';
         });
         $('.order_calculator #FORM_COMPLECT_FID_calc_form_feedback').val(complect);
+        return false;
+    });
+
+    $('.calculator .ipoteka-button').on('click', function(){
+        var project = $('h1').text();
+        $('.order_calculator_ipoteka #FORM_PROJECT_FID_ipoteka_form_feedback').val(project);
+        $.fancybox({
+            padding: 0,
+            content: $('.order_calculator_ipoteka')
+        });
+        var type = $('.calculator .type input:checked').parent().find('.name').text();
+        $('.order_calculator_ipoteka #FORM_TYPE_FID_ipoteka_form_feedback').val(type);
+        var complect = '';
+        $('.calculator .complect input:checked').each(function() {
+            complect += $(this).parent().find(".name").text() + '; ';
+        });
+        $('.order_calculator_ipoteka #FORM_COMPLECT_FID_ipoteka_form_feedback').val(complect);
         return false;
     });
 

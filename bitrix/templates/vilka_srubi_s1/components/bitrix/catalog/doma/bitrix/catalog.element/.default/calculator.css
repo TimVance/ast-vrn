@@ -140,7 +140,7 @@
     padding-left: 100px;
 }
 
-.order_calculator {
+.order_calculator, .order_calculator_ipoteka {
     width: 320px;
     padding: 15px 30px;
     border: 1px solid #fff;

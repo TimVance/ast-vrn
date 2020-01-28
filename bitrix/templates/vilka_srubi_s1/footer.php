@@ -92,7 +92,7 @@ IncludeTemplateLangFile(__FILE__);
         );?>
     </div>
     <div class="calc_project">
-        <div class="popformzag"><?=GetMessage('FORM_RASCH')?>test</div>
+        <div class="popformzag"><?=GetMessage('FORM_RASCH')?></div>
         <?$APPLICATION->IncludeComponent(
 	"vilka:feedback",
 	"bootstrap",
