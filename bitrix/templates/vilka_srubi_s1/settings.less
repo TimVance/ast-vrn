@@ -1,0 +1,100 @@
+/* colors */
+@color_1: @VILKA_color_1;
+@color_2: @VILKA_color_2;
+
+@color_3: @VILKA_color_3;
+@color_4: @VILKA_color_4;
+@color_5: @VILKA_color_5; 
+@color_6: @VILKA_color_6;
+@color_7: @VILKA_color_7;
+
+@color_8: @VILKA_color_8;
+@color_9: @VILKA_color_9;
+
+@background_color: @VILKA_background_color;
+@background_header: @VILKA_background_header;
+
+
+
+@top_menu_img: @VILKA_top_menu_img;
+@top_menu_bgcolor: @VILKA_top_menu_bgcolor;
+@top_menu_color_1: @VILKA_top_menu_color_1;
+@top_menu_color_2: @VILKA_top_menu_color_2;
+@top_menu_color_3: @VILKA_top_menu_color_3;
+@top_menu_color_4: @VILKA_top_menu_color_4;
+@top_menu_color_5: @VILKA_top_menu_color_5;
+
+
+/* Хлебные крошки */
+@bread_img: @VILKA_bread_img;
+@bread_bgcolor: @VILKA_bread_bgcolor;
+
+
+/* Фишки на главной (под баннером) */
+@section1_img: @VILKA_section1_img;
+@section1_bgcolor: @VILKA_section1_bgcolor; 
+@section1_color: @VILKA_section1_color;
+
+
+/* Галерея на главной */
+@index_gal_mask_bg: @VILKA_index_gal_mask_bg;
+@index_gal_mask_opacity: @VILKA_index_gal_mask_opacity;
+
+/* Подвал */
+@foot_img: @VILKA_foot_img;
+@foot_color: @VILKA_foot_color;
+@foot_tel_color: @VILKA_foot_tel_color;
+@foot_tel_code_color: @VILKA_foot_tel_code_color;
+@foot_zag: @VILKA_foot_zag;
+@foot_menu_a: @VILKA_foot_menu_a;
+@social_icons_color: @VILKA_social_icons_color;
+
+
+
+
+
+
+
+
+
+  /* fonts */
+@main_font_color: @VILKA_main_font_color;
+@main_font:"Open Sans", Helvetica, Arial, sans-serif;
+@roboto: 'Roboto Condensed', sans-serif;;
+
+@pf_semi: "pf_beausans_prosemibold", Helvetica, Arial, sans-serif;
+@pf_bold: "pf_beausans_probold", Helvetica, Arial, sans-serif;
+@pf_reg: "pf_beausans_proregular", Helvetica, Arial, sans-serif;
+@pf_ligh: "pf_beausans_prolight", Helvetica, Arial, sans-serif;
+
+@clred_hov:saturate(lighten(@clred, 5%), 22%); // #f23148;
+
+@clblue:#3f79d1;
+
+
+/* облегчалки */
+.border-radius( @topleft: 0, @topright: 0, @bottomleft: 0, @bottomright: 0 ){
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
+.box-shadow( @x: 0, @y: 0, @blur: 0, @alpha: 0 ){
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-ins( @x: 0, @y: 0, @blur: 0, @alpha: 0 ){
+  -webkit-box-shadow:inset @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow:inset @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow:inset @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.transition( @prop: all, @time: 1s, @ease: linear ){
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  -ms-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}

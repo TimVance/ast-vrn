@@ -1,0 +1,15 @@
+.vilka_feedback label{
+    display: block;
+}
+.captcha_block {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    /*width: 49%;*/
+}
+/*.captcha_block input{
+    width: 100%;
+}*/
+.captcha_img {
+    margin-right: 20px;
+}

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'pf_beausans_problack';
+    src: url('pfbeausanspro-black-webfont.eot');
+    src: url('pfbeausanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-black-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-black-webfont.woff') format('woff'),
+         url('pfbeausanspro-black-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-black-webfont.svg#pf_beausans_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_beausans_probold';
+    src: url('pfbeausanspro-bold_0-webfont.eot');
+    src: url('pfbeausanspro-bold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-bold_0-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-bold_0-webfont.woff') format('woff'),
+         url('pfbeausanspro-bold_0-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-bold_0-webfont.svg#pf_beausans_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_beausans_prolight';
+    src: url('pfbeausanspro-light_0-webfont.eot');
+    src: url('pfbeausanspro-light_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-light_0-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-light_0-webfont.woff') format('woff'),
+         url('pfbeausanspro-light_0-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-light_0-webfont.svg#pf_beausans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_beausans_proregular';
+    src: url('pfbeausanspro-regular_0-webfont.eot');
+    src: url('pfbeausanspro-regular_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-regular_0-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-regular_0-webfont.woff') format('woff'),
+         url('pfbeausanspro-regular_0-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-regular_0-webfont.svg#pf_beausans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_beausans_prosemibold';
+    src: url('pfbeausanspro-semibold_0-webfont.eot');
+    src: url('pfbeausanspro-semibold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-semibold_0-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-semibold_0-webfont.woff') format('woff'),
+         url('pfbeausanspro-semibold_0-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-semibold_0-webfont.svg#pf_beausans_prosemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_beausans_prothin';
+    src: url('pfbeausanspro-thin_0-webfont.eot');
+    src: url('pfbeausanspro-thin_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-thin_0-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-thin_0-webfont.woff') format('woff'),
+         url('pfbeausanspro-thin_0-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-thin_0-webfont.svg#pf_beausans_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_beausans_proextrathin';
+    src: url('pfbeausanspro-xthin_0-webfont.eot');
+    src: url('pfbeausanspro-xthin_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pfbeausanspro-xthin_0-webfont.woff2') format('woff2'),
+         url('pfbeausanspro-xthin_0-webfont.woff') format('woff'),
+         url('pfbeausanspro-xthin_0-webfont.ttf') format('truetype'),
+         url('pfbeausanspro-xthin_0-webfont.svg#pf_beausans_proextrathin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/******************************************/
+@font-face {
+    font-family: 'icomoon';
+    src:url('icomoon.eot?32dyx4');
+    src:url('icomoon.eot?#iefix32dyx4') format('embedded-opentype'),
+    url('icomoon.ttf?32dyx4') format('truetype'),
+    url('icomoon.woff?32dyx4') format('woff'),
+    url('icomoon.svg?32dyx4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-str_bot:before {
+    content: "\e604";
+}
+.icon-str_left:before {
+    content: "\e605";
+}
+.icon-str_right:before {
+    content: "\e606";
+}
+.icon-str_top:before {
+    content: "\e607";
+}
+.icon-ico1:before {
+    content: "\e600";
+}
+.icon-ico2:before {
+    content: "\e601";
+}
+.icon-ico3:before {
+    content: "\e602";
+}
+.icon-ico4:before {
+    content: "\e603";
+}

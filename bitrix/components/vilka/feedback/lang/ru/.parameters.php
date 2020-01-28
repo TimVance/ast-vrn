@@ -1,0 +1,19 @@
+<?
+$MESS ['MFP_CAPTCHA'] = "Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей";
+$MESS ['MFP_OK_MESSAGE'] = "Сообщение, выводимое пользователю после отправки";
+$MESS ['MFP_OK_TEXT'] = "Спасибо, ваше сообщение принято.";
+$MESS ['MFP_EMAIL_TO'] = "E-mail, на который будет отправлено письмо";
+$MESS ['MFP_REQUIRED_FIELDS'] = "Обязательные поля для заполнения";
+$MESS ['MFP_SHOW_FIELDS'] = "Показывать поля";
+$MESS ['MFP_ALL_REQ'] = "(все необязательные)";
+$MESS ['MFP_NAME'] = "Имя";
+$MESS ['MFP_PHONE'] = "Телефон";
+$MESS ['MFP_MESSAGE'] = "Сообщение";
+$MESS ['MFP_EMAIL_TEMPLATES'] = "Почтовые шаблоны для отправки письма";
+$MESS ['MFP_FORM_ID'] = "Уникальный ID формы";
+$MESS ['MFP_MAIL_TITLE'] = "Письмо с сайта";
+$MESS['VF_IBLOCK_TYPE'] = "Тип инфоблока";
+$MESS['VF_IBLOCK_ID'] = "Инфоблок";
+$MESS['MFP_USER_NAME'] = "Имя пользователя";
+$MESS['MFP_USER_MAIL'] = "E-mail пользователя";
+$MESS['MFP_USER_PHONE'] = "Телефон пользователя";

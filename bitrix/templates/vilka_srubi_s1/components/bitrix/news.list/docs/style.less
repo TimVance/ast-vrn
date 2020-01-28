@@ -1,0 +1,47 @@
+@import "../../../../settings";
+
+.docs_list {
+  .item {
+    display: block;
+    background: #fff;
+    font-size: 13px;
+    color: @main_font_color;
+    font-family: @pf_bold;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 10px 20px;
+    .box-shadow (0px, 2px, 2px, 30%);
+    .transition( box-shadow ,100ms, linear );
+
+    &:hover {
+      text-decoration: none;
+      .box-shadow (0, 0, 0, 30%);
+      .neme {
+        text-decoration: underline;
+      }
+    }
+    .ext {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px;
+      height: 50px;
+      margin-right: 20px;
+      background: url("../../../../images/doc.png") 50% no-repeat;
+      color: #fff;
+      padding: 28px 0 0 5px;
+      &.pdf{
+        background-image: url("../../../../images/pdf.png");
+      }
+      &.xls{
+        background-image: url("../../../../images/xls.png");
+      }
+    }
+    .descr {
+      display: inline-block;
+      vertical-align: middle;
+      color: @color_6;
+      font-size: 18px;
+    }
+  }
+
+}

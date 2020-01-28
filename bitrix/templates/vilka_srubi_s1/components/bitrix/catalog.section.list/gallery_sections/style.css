@@ -1,0 +1,86 @@
+.gallery_sections .item {
+  display: block;
+  background: #fff;
+  font-size: 13px;
+  color: #555555;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -webkit-transition: box-shadow 100ms linear;
+  -moz-transition: box-shadow 100ms linear;
+  -o-transition: box-shadow 100ms linear;
+  -ms-transition: box-shadow 100ms linear;
+  transition: box-shadow 100ms linear;
+}
+.gallery_sections .item .img {
+  position: relative;
+  overflow: hidden;
+}
+.gallery_sections .item .mask {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(255,255,255,0);
+  text-align: center;
+  -webkit-transition: background 200ms linear;
+  -moz-transition: background 200ms linear;
+  -o-transition: background 200ms linear;
+  -ms-transition: background 200ms linear;
+  transition: background 200ms linear;
+}
+.gallery_sections .item .mask .btn {
+  width: 134px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -60px;
+  opacity: 0;
+  -webkit-transition: opacity 200ms linear;
+  -moz-transition: opacity 200ms linear;
+  -o-transition: opacity 200ms linear;
+  -ms-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+.gallery_sections .item:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 0 rgba(0,0,0,0.3);
+}
+.gallery_sections .item:hover .mask {
+  background: rgba(255,255,255,0.7);
+}
+.gallery_sections .item:hover .mask .btn {
+  opacity: 1;
+}
+.gallery_sections .item span {
+  display: block;
+}
+.gallery_sections .item img {
+  width: 100%;
+  height: auto;
+}
+.gallery_sections .item .descr {
+  padding: 5%;
+}
+.gallery_sections .item .name {
+  font-size: 20px;
+  line-height: 1;
+  color: #333;
+  font-family: "pf_beausans_probold", Helvetica, Arial, sans-serif;
+}
+.gallery_sections .item .btn {
+  vertical-align: middle;
+  display: inline-block;
+  width: 43%;
+  padding: 8px 5px 6px;
+}
+.gallery_sections .item .btn:hover {
+  background: #e76931;
+  color: #fff;
+}

@@ -1,0 +1,143 @@
+.catalog_greed {
+  padding-bottom: 40px;
+}
+.catalog_greed.cat_gr_bg {
+background: #ebebeb url("images/back.png") 50% 0;
+}
+.catalog_greed .page-header {
+  text-align: center;
+  font-family: "pf_beausans_probold", Helvetica, Arial, sans-serif;
+  color: #353535;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin-bottom: 30px;
+  border: none;
+  
+}
+.catalog_greed .projects .item {
+  display: block;
+  background: #fff;
+  font-size: 13px;
+  color: #555555;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -webkit-transition: box-shadow 100ms linear;
+  -moz-transition: box-shadow 100ms linear;
+  -o-transition: box-shadow 100ms linear;
+  -ms-transition: box-shadow 100ms linear;
+  transition: box-shadow 100ms linear;
+}
+.catalog_greed .projects .item:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 0 rgba(0,0,0,0.3);
+}
+.catalog_greed .projects .item span {
+  display: block;
+}
+.catalog_greed .projects .item img {
+  width: 100%;
+  height: auto;
+}
+.catalog_greed .projects .item .descr {
+  padding: 5%;
+}
+.catalog_greed .projects .item .name {
+  font-size: 20px;
+  color: #333333;
+  font-family: "pf_beausans_probold", Helvetica, Arial, sans-serif;
+}
+.catalog_greed .projects .item .variants {
+  padding-bottom: 20px;
+}
+.catalog_greed .projects .item .variants ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.catalog_greed .projects .item .variants ul li {
+  padding-top: 3px;
+  padding-left: 14px;
+}
+.catalog_greed .projects .item .variants ul li:before {
+  display: block;
+  content: '';
+  background: #802323;
+  width: 4px;
+  height: 4px;
+  overflow: hidden;
+  margin-left: -14px;
+  margin-top: 8px;
+  position: absolute;
+}
+.catalog_greed .projects .item .variants .specs {
+  padding-top: 5px;
+  font-size: 12px;
+  line-height: 12px;
+}
+.catalog_greed .projects .item .variants .specs .col_1,
+.catalog_greed .projects .item .variants .specs .col_2 {
+  display: inline-block;
+  width: 35%;
+  vertical-align: middle;
+}
+.catalog_greed .projects .item .variants .specs .col_2 {
+  width: 65%;
+}
+.catalog_greed .projects .item .variants .specs .col_2 b {
+  display: block;
+  padding-top: 4px;
+}
+.catalog_greed .projects .item .variants .specs .elem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.catalog_greed .projects .item .variants .ico {
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #f4f4f4 50% no-repeat;
+}
+.catalog_greed .projects .item .price {
+  display: inline-block;
+  width: 55%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  color: #333333;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.catalog_greed .projects .item .btn {
+  vertical-align: middle;
+  display: inline-block;
+  width: 43%;
+  padding: 8px 5px 6px;
+}
+.catalog_greed .projects .item .btn:hover {
+  background: #E76931;
+  color: #fff;
+}
+.catalog_greed .projects .item .height {
+  position: absolute;
+  background: #0F9E5E;
+  color: #fff;
+  padding: 10px;
+}
+.catalog_greed .show_all {
+  text-align: center;
+}
+.catalog_greed .show_all .btn {
+  color: #B07651;
+  border-color: #B07651;
+}
+.catalog_greed .show_all .btn:hover {
+  background: #B07651;
+  color: #fff;
+}

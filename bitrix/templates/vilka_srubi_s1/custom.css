@@ -1,0 +1,16 @@
+/* your css customization */
+.ul-line {
+    padding: 0;
+}
+.ul-line > li:before {
+    content: "";
+    width: 10px;
+    height: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f86e01;
+    margin-right: 10px;
+}
+.ul-line > li {
+    list-style-type: none;
+}

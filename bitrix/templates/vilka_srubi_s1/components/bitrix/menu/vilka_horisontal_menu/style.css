@@ -1,0 +1,92 @@
+.vilka_top_menu {
+  background: #f86e01;
+  margin-bottom: 0px;
+  border: none;
+  font-family: "pf_beausans_probold", Helvetica, Arial, sans-serif;
+  z-index: 200;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+}
+.vilka_top_menu .navbar-collapse {
+  padding: 0;
+}
+.vilka_top_menu .navbar-nav >li >a {
+  color: #f5f5f5;
+  height: 54px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+}
+.vilka_top_menu .navbar-nav >li >a:hover {
+  -webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  color: #FFF !important;
+  background: #d05c01;
+}
+.vilka_top_menu .navbar-nav .open>a,
+.vilka_top_menu .navbar-nav .open>a:hover {
+  -webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  color: #FFF;
+  background: #d05c01;
+  z-index: 10;
+}
+.vilka_top_menu .navbar-nav .dropdown-menu {
+  margin-top: -1px;
+  background: #d05c01;
+  color: #FFF;
+  z-index: 5;
+}
+.vilka_top_menu .navbar-nav .dropdown-menu >li >a {
+  color: #FFF;
+  padding: 7px 13px;
+}
+.vilka_top_menu .navbar-nav .dropdown-menu >li >a:hover {
+  background: #f86e01!important;
+  color: #FFF;
+}
+.vilka_top_menu .navbar-toggle {
+  border-color: #9a5f39;
+}
+.vilka_top_menu .navbar-toggle .icon-bar {
+  background: #9a5f39;
+}
+.vilka_top_menu .navbar-toggle:hover,
+.vilka_top_menu .navbar-toggle:focus {
+  background: #9a5f39;
+}
+.vilka_top_menu .navbar-toggle:hover .icon-bar,
+.vilka_top_menu .navbar-toggle:focus .icon-bar {
+  background: #FFF;
+}
+.vilka_top_menu .search_block {
+  background: #d15d01;
+  position: relative;
+  -webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+  color: #ffffff;
+  padding: 4px 10px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+}
+.vilka_top_menu .search_block .form-control {
+  border: none;
+  padding: 0;
+  height: 24px;
+  background: #d15d01;
+  box-shadow: none;
+  font-family: "pf_beausans_prosemibold", Helvetica, Arial, sans-serif;
+  color: #FFF;
+}
+.vilka_top_menu .search_block .btn {
+  padding: 2px 4px;
+  border: none;
+  background: #d15d01;
+  color: #e5ceba;
+}

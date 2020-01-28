@@ -1,0 +1,117 @@
+@import "../../../../settings";
+
+/* projects *************************************/
+.catalog_greed_small {
+  padding-bottom: 40px;
+  &.cat_gr_bg{
+    background: #f5e8d1;
+  }
+  .page-header {
+    text-align: center;
+  }
+  .projects {
+    /*margin-right: -10px;
+    margin-left: -10px;*/
+    >div {
+      /*padding-right: 10px;
+      padding-left: 10px;*/
+    }
+
+    .item {
+      display: block;
+      background: #fff;
+      font-size: 13px;
+      color: @main_font_color;
+      margin-bottom: 30px;
+      position: relative;
+      .box-shadow (0px, 2px, 2px, 30%);
+      .transition( box-shadow ,100ms, linear );
+
+      &:hover {
+        text-decoration: none;
+        .box-shadow (0, 0, 0, 30%);
+      }
+      span {
+        display: block;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .descr {
+        padding: 5%;
+      }
+      .name {
+        font-size: 16px;
+        color: #555;
+        font-family: @pf_semi;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+/*      .variants {
+        padding-bottom: 20px;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li {
+            padding-top: 3px;
+            padding-left: 14px;
+            &:before {
+              display: block;
+              content: '';
+              background: @color_5;
+              width: 4px;
+              height: 4px;
+              overflow: hidden;
+              margin-left: -14px;
+              margin-top: 8px;
+              position: absolute;
+            }
+          }
+        }
+      }*/
+
+      .price {
+        display:block;
+        text-align: center;
+        font-family: @roboto;
+        font-weight: bold;
+        color: @color_6;
+        font-size: 24px;
+        vertical-align: middle;
+      }
+      .btn {
+        vertical-align: middle;
+        display: inline-block;
+        width: 43%;
+        padding: 8px 5px 6px;
+        &:hover {
+          background: @color_2;
+          color: #fff;
+        }
+      }
+
+
+
+      .height {
+        position: absolute;
+        background: #0F9E5E;
+        color: #fff;
+        padding: 10px;
+      }
+    }
+  }
+  .show_all {
+    text-align: center;
+    .btn {
+      color: @color_4;
+      border-color: @color_4;
+      &:hover {
+        background: @color_4;
+        color: #fff;
+      }
+    }
+
+  }
+}

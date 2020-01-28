@@ -1,0 +1,48 @@
+@import "../../../../settings";
+
+.news {
+  .item {
+    display: block;
+    font-size: 13px;
+    color: @main_font_color;
+    margin-bottom: 20px;
+    &:hover {
+      text-decoration: none;
+    }
+    span {
+      display: block;
+    }
+    img {
+      width: 25%;
+      height: auto;
+      vertical-align: top;
+    }
+    .descr {
+      vertical-align: top;
+      display: inline-block;
+      width: 65%;
+      margin-left: 8%
+    }
+    .neme {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .date {
+      color: #888888;
+      font-size: 13px;
+    }
+  }
+
+  .all_news {
+    float: right;
+    margin-top: -75px;
+    color: @color_4;
+    border-color: @color_4;
+    &:hover {
+      background: @color_4;
+      color: #fff;
+    }
+  }
+
+}
