@@ -192,5 +192,3 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         </div>
     </div>
 </div>
-
-<?php $APPLICATION->SetAdditionalCss("/bitrix/templates/vilka_srubi_s1/components/bitrix/catalog/doma/bitrix/catalog.element/.default/calculator.css"); ?>

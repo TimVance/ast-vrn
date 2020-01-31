@@ -21,11 +21,12 @@ if(VH::val("less_on", "0") == 1) {
 
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/fonts/fonts.css');
     $APPLICATION->SetAdditionalCSS('/bitrix/css/main/font-awesome.min.css');
+    $APPLICATION->SetAdditionalCSS('/bitrix/css/main/calculator.css');
 
     $APPLICATION->SetAdditionalCSS('/bitrix/css/main/bootstrap.min.css');
     //$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/fonts/fonts.css');
-    $APPLICATION->AddHeadScript('http://yastatic.net/jquery/1.11.3/jquery.min.js'); // JQ
-    $APPLICATION->AddHeadScript('http://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js');
+    $APPLICATION->AddHeadScript('https://yastatic.net/jquery/1.11.3/jquery.min.js'); // JQ
+    $APPLICATION->AddHeadScript('https://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js');
 
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/js/fb/jquery.fancybox.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/js/fb/jquery.fancybox-thumbs.css');
@@ -51,6 +52,20 @@ if(VH::val("less_on", "0") == 1) {
     <?$APPLICATION->ShowHead();?>
     <title><?$APPLICATION->ShowTitle()?></title>
     <link rel="prefetch" href="<?=SITE_TEMPLATE_PATH?>/images/loader.gif">
+<!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'idKX5tgQJXpCAyLGY';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
 </head>
 
 <body>
