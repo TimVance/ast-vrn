@@ -47,4 +47,28 @@ $(function(){
         var $cont = $(".s1fb_msg");
         if ($cont.has(e.target).length === 0){$cont.fadeOut(200);}
     });
+
+
+    // Цели для яндекс метрики
+    $(".vilka_feedback > form").on("submit", function() {
+        let form = $(this);
+        let id = form.attr("data-form-id");
+        switch (id) {
+            case "5621009edf431":
+                yaCounter57283042.reachGoal('zvonok');
+                break;
+            case "1621009edf431":
+                yaCounter57283042.reachGoal('raschet_proekt');
+                break;
+            case "561fc95e15374":
+                yaCounter57283042.reachGoal('callback');
+                break;
+            case "calc_form_feedback":
+                yaCounter57283042.reachGoal('order');
+                break;
+            case "ipoteka_form_feedback":
+                yaCounter57283042.reachGoal('ipoteka');
+                break;
+        }
+    });
 });

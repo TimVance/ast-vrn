@@ -27,7 +27,7 @@ $this->setFrameMode(true);
 	else {
 	?>
 
-<form action="<?=POST_FORM_ACTION_URI?>" method="POST" role="form" enctype="multipart/form-data">
+<form data-form-id="<?=$arParams["FORM_ID"]?>" action="<?=POST_FORM_ACTION_URI?>" method="POST" role="form" enctype="multipart/form-data">
 <?=bitrix_sessid_post()?>
     <input type="hidden" name="FORM_ID_<?="FID_".$arParams["FORM_ID"]?>" value="<?="FID_".$arParams["FORM_ID"]?>">
     <?
