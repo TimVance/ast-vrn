@@ -66,6 +66,21 @@ if(VH::val("less_on", "0") == 1) {
     })(document, window, 'Chatra');
 </script>
 <!-- /Chatra {/literal} -->
+
+<!-- Marquiz script start -->
+<script src="//script.marquiz.ru/v1.js" type="application/javascript"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  Marquiz.init({ 
+    id: '5e39866e8d9b0700440d60fd', 
+    autoOpen: false, 
+    autoOpenFreq: 'once', 
+    openOnExit: false 
+  });
+});
+</script>
+<!-- Marquiz script end -->
+
 </head>
 
 <body>
@@ -114,7 +129,7 @@ if(VH::val("less_on", "0") == 1) {
                         </div>
                         <div class="col-xs-5 va_m">
                             <div class="va_m_b">
-                                <a href="#" class="btn zz_btn_head back_call_bt"><?=GetMessage('VR_ZZ')?></a>
+                               <a href="#" class="btn zz_btn_head back_call_bt"><?=GetMessage('VR_ZZ')?></a>
                             </div>
                         </div>
                     </div>

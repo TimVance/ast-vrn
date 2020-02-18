@@ -1,5 +1,5 @@
 <?
-$MESS["VR_ORDER"] = "Заказать";
+$MESS["VR_ORDER"] = "Постройте дом";
 $MESS["VR_ORDER_IPOTEKA"] = "Этот дом в ипотеку";
 $MESS["VR_CALC_CAPTION"] = "Калькулятор проекта";
 $MESS["VR_PRICE"] = "Цена без скидки";
