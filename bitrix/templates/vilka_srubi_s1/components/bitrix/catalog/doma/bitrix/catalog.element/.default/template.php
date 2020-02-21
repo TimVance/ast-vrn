@@ -32,15 +32,14 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
             }
             ?>
         </div>
-
-        <div class="slider">
+        <div class="slider serv_gal">
             <div class="loader"><img src="<?= SITE_TEMPLATE_PATH ?>/images/loader.gif"></div>
             <div class="row">
                 <div class="col-sm-9 main_slider">
                     <?
                     foreach ($arResult['VR_PHOTOS']['IMG'] as $key => $img) {
                         ?>
-                        <img src="<?= $img['src'] ?>" alt="<?= $strAlt ?>"><?
+                    <a class="item fbt" rel="gallery_pr" href="<?= $img['src'] ?>"><img src="<?= $img['src'] ?>" alt="<?= $strAlt ?>"><span class="mask"><i class="fa fa-search"></i></span></a><?
                     }
                     ?>
                 </div>
