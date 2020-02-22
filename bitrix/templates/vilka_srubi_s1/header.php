@@ -28,10 +28,9 @@ if(VH::val("less_on", "0") == 1) {
     $APPLICATION->AddHeadScript('https://yastatic.net/jquery/1.11.3/jquery.min.js'); // JQ
     $APPLICATION->AddHeadScript('https://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js');
 
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/js/fb/jquery.fancybox.css');
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/js/fb/jquery.fancybox-thumbs.css');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/fb/jquery.fancybox.js');
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/fb/jquery.fancybox-thumbs.js');
+
+    $APPLICATION->SetAdditionalCSS('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
+    $APPLICATION->AddHeadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js');
 
     //$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/js/owl/owl.carousel.css');
     //$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/owl/owl.carousel.min.js');

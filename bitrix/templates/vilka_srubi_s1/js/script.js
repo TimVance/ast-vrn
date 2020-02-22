@@ -17,7 +17,7 @@ $.fn.equivalentH = function (options){
             tmp_schet = 0;
 
         //alert( parent_w + ' / ' +block_w + ' = '+count_blocks);
-        //делаем сравнение высоты каждого блока с максимальной
+        //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         $blocks.each(function(ind){
             maxH = ( $(options.name, this).outerHeight() > maxH ) ? $(options.name, this).outerHeight() : maxH;
 
