@@ -33,7 +33,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
             ?>
         </div>
         <div class="slider serv_gal">
-            <div class="loader"><img src="<?= SITE_TEMPLATE_PATH ?>/images/loader.gif"></div>
+<!--            <div class="loader"><img src="--><?//= SITE_TEMPLATE_PATH ?><!--/images/loader.gif"></div>-->
             <div class="row">
                 <div class="col-sm-9 main_slider">
                     <?

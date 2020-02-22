@@ -63,7 +63,14 @@ $(function(){
         padding: 0,
         helpers : {
             thumbs : true
-        }
+        },
+        image: {
+            // Wait for images to load before displaying
+            //   true  - wait for image to load and then display;
+            //   false - display thumbnail and load the full-sized image over top,
+            //           requires predefined image dimensions (`data-width` and `data-height` attributes)
+            preload: false
+        },
     });
 
     $('.back_call_bt').on('click', function(){
