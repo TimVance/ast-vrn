@@ -39,7 +39,7 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                     <?
                     foreach ($arResult['VR_PHOTOS']['IMG'] as $key => $img) {
                         ?>
-                    <a class="item fbt" rel="gallery_pr" href="<?= $img['src'] ?>"><img src="<?= $img['src'] ?>" alt="<?= $strAlt ?>"><span class="mask"><i class="fa fa-search"></i></span></a><?
+                    <a class="item gallery_popup" rel="gallery_popup" href="<?= $img['src'] ?>"><img src="<?= $img['src'] ?>" alt="<?= $strAlt ?>"><span class="mask"><i class="fa fa-search"></i></span></a><?
                     }
                     ?>
                 </div>

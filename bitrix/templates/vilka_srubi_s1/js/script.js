@@ -73,6 +73,13 @@ $(function(){
         },
     });
 
+    $('.gallery_popup').magnificPopup({
+      type: 'image',
+      gallery:{
+        enabled:true
+      }
+    });
+
     $('.back_call_bt').on('click', function(){
         $.fancybox({
             padding: 0,
