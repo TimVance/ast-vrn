@@ -13,7 +13,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());
 
-$arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" && !$USER->IsAuthorized()) ? "Y" : "N");
+$arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" ) ? "Y" : "N");
 $arParams["EVENT_NAME"] = trim($arParams["EVENT_NAME"]);
 if($arParams["EVENT_NAME"] == '')
     $arParams["EVENT_NAME"] = "FEEDBACK_FORM";
@@ -268,26 +268,60 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && $_POST["FORM_ID_".$FID] && check_bitrix
     }
     /* !create post event */
 
-    if($arParams["USE_CAPTCHA"] == "Y")
-    {
-        include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
-        $captcha_code = $_POST["captcha_sid"];
-        $captcha_word = $_POST["captcha_word"];
-        $cpt = new CCaptcha();
-        $captchaPass = COption::GetOptionString("main", "captcha_password", "");
-        if (strlen($captcha_word) > 0 && strlen($captcha_code) > 0)
-        {
-            if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass)){
-                $arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
-                $arResult["FORM_ERRORS"]['CAPTCHA'] = true;
-            }
-        }
-        else{
-            $arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
-            $arResult["FORM_ERRORS"]['CAPTCHA'] = true;
-        }
+//    if($arParams["USE_CAPTCHA"] == "Y")
+//    {
+//        include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
+//        $captcha_code = $_POST["captcha_sid"];
+//        $captcha_word = $_POST["captcha_word"];
+//        $cpt = new CCaptcha();
+//        $captchaPass = COption::GetOptionString("main", "captcha_password", "");
+//        if (strlen($captcha_word) > 0 && strlen($captcha_code) > 0)
+//        {
+//            if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass)){
+//                $arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
+//                $arResult["FORM_ERRORS"]['CAPTCHA'] = true;
+//            }
+//        }
+//        else{
+//            $arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
+//            $arResult["FORM_ERRORS"]['CAPTCHA'] = true;
+//        }
+//
+//    }
 
+    // captcha
+    if($arParams["USE_CAPTCHA"] == "Y") {
+        $recaptcha = $_POST['g-recaptcha-response'];
+        $secret='6LenG90UAAAAAOKG2Z5WLfCbB7CIhtJAdYqI1XfY';
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $params = [
+            'secret' => $secret,
+            'response' => $recaptcha,
+            'remoteip' => $_SERVER['REMOTE_ADDR']
+        ];
+
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        $response = curl_exec($ch);
+        if(!empty($response)) $decoded_response = json_decode($response);
+        $result_g = false;
+        if ($decoded_response && $decoded_response->success)
+        {
+            $result_g = $decoded_response->success;
+        }
+        //echo $_POST["g-recaptcha-response"]; echo ' - '; echo $result_g;
+        if (empty($_POST["g-recaptcha-response"]) || !$result_g)
+            $arResult["FORM_ERRORS"]['CAPTCHA'] = true;
     }
+    // captcha
+
+
 
     if(empty($arResult["FORM_ERRORS"]))
     {
@@ -367,8 +401,8 @@ elseif($_REQUEST["success"] == $FID)
 }
 
 
-if($arParams["USE_CAPTCHA"] == "Y")
-    $arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
+//if($arParams["USE_CAPTCHA"] == "Y")
+//    $arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
 
 
 /*

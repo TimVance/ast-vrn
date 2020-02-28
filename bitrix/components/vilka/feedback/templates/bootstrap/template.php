@@ -77,18 +77,26 @@ $this->setFrameMode(true);
 
     }
     ?>
+<!--    --><?//if($arParams["USE_CAPTCHA"] == "Y"){?>
+<!--        <div class="captcha form-group--><?//if($err['CAPTCHA']) {?><!-- has-error--><?//}?><!--">-->
+<!--            <label for="captcha" class="control-label">--><?//=GetMessage("MFT_CAPTCHA_CODE")?><!--<span class="mf-req">*</span></label>-->
+<!--            <div class="captcha_block">-->
+<!--                <input type="hidden" name="captcha_sid" value="--><?//=$arResult["capCode"]?><!--">-->
+<!--                <img src="/bitrix/tools/captcha.php?captcha_sid=--><?//=$arResult["capCode"]?><!--" width="180" height="40" alt="CAPTCHA" class="captcha_img">-->
+<!--            </div>-->
+<!--            <div class="captcha_block">-->
+<!--                <input type="text" name="captcha_word" class="form-control" id="captcha" size="7" maxlength="50" value="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    --><?//}?>
+
     <?if($arParams["USE_CAPTCHA"] == "Y"){?>
-        <div class="captcha form-group<?if($err['CAPTCHA']) {?> has-error<?}?>">
-            <label for="captcha" class="control-label"><?=GetMessage("MFT_CAPTCHA_CODE")?><span class="mf-req">*</span></label>
-            <div class="captcha_block">
-                <input type="hidden" name="captcha_sid" value="<?=$arResult["capCode"]?>">
-                <img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>" width="180" height="40" alt="CAPTCHA" class="captcha_img">
-            </div>
-            <div class="captcha_block">
-                <input type="text" name="captcha_word" class="form-control" id="captcha" size="7" maxlength="50" value="">
-            </div>
-        </div>
+        <? //if ($err['CAPTCHA']) echo 'grecaptcha.reset'; else echo 'no'; ?>
+        <? if ($err['CAPTCHA']) echo "<script>grecaptcha.render('recaptcha_".$arParams['FORM_ID']."', {'sitekey': sitekey});</script>"; ?>
+        <div style="color:red"><?=($err['CAPTCHA'] ? GetMessage("MFT_CAPTCHA_ERROR") : '')?></div>
+        <div style="transform: scale(.85, 0.85) translate(-22px, -4px);" class="recapthca-wrapper" id="recaptcha_<?=$arParams['FORM_ID']?>"></div>
     <?}?>
+
     <?/*<input type="hidden" name="s1ajax" value="y">*/?>
 	<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
 	<div style="text-align: center"><input type="submit" name="submit" class="btn zz_btn" value="<?=GetMessage("MFT_SUBMIT")?>"></div>

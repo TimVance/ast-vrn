@@ -46,7 +46,9 @@ if(VH::val("less_on", "0") == 1) {
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/script.js');
     //$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/colors/'.$curColor.'.css');
     //$APPLICATION->AddHeadString('<script>BX.message('.CUtil::PhpToJSObject( $MESS, false ).')</script>', true);
-
+    ?>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit" async defer></script>
+    <?
     //VH::DoCssHead($fin = $_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH.'/settings.less');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/settings.css');
 	if(!VH::$isDemo) $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/template_styles.css');
