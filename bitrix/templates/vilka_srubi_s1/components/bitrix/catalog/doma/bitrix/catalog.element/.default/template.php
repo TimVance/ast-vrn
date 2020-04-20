@@ -38,10 +38,10 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
                 <?
                 echo '<div class="stikers-wrap">';
                 if($arResult["PROPERTIES"]['SALE']['VALUE'] == "Y") {
-                    echo '<span class="sale sticker">'.$arResult["PROPERTIES"]["SALE"]["NAME"].'</span>';
+                    //echo '<span class="sale sticker">'.$arResult["PROPERTIES"]["SALE"]["NAME"].'</span>';
                 }
                 if($arResult["PROPERTIES"]['NEW']['VALUE'] == "Y") {
-                    echo '<span class="new sticker">'.$arResult["PROPERTIES"]["NEW"]["NAME"].'</span>';
+                    //echo '<span class="new sticker">'.$arResult["PROPERTIES"]["NEW"]["NAME"].'</span>';
                 }
                 echo '</div>';
                 ?>
