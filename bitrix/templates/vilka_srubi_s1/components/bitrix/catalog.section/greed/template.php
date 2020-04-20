@@ -36,7 +36,16 @@ $this->setFrameMode(true);
                 ?>
                 <div class="col-md-4 col-xs-6<?=($cell>1 && $APPLICATION->sDirPath == SITE_DIR)?' hidden-xs hidden-sm':''?>" id="<?=$this->GetEditAreaId($arElement['ID']);?>">
                     <a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="item">
-                        <?//'<span class="height"></span>'?>
+                        <?
+                            echo '<div class="stikers-wrap">';
+                            if($arElement["PROPERTIES"]['SALE']['VALUE'] == "Y") {
+                                echo '<span class="sale sticker">'.$arElement["PROPERTIES"]["SALE"]["NAME"].'</span>';
+                            }
+                            if($arElement["PROPERTIES"]['NEW']['VALUE'] == "Y") {
+                                echo '<span class="new sticker">'.$arElement["PROPERTIES"]["NEW"]["NAME"].'</span>';
+                            }
+                            echo '</div>';
+                        ?>
                         <img src="<?=$arElement['IMG']['src']?>" class="pic">
                     <span class="descr">
                         <span class="text">

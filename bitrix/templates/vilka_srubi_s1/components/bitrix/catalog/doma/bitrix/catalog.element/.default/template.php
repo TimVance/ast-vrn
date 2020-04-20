@@ -35,6 +35,16 @@ isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && $arRe
         <div class="slider serv_gal">
 <!--            <div class="loader"><img src="--><?//= SITE_TEMPLATE_PATH ?><!--/images/loader.gif"></div>-->
             <div class="row">
+                <?
+                echo '<div class="stikers-wrap">';
+                if($arResult["PROPERTIES"]['SALE']['VALUE'] == "Y") {
+                    echo '<span class="sale sticker">'.$arResult["PROPERTIES"]["SALE"]["NAME"].'</span>';
+                }
+                if($arResult["PROPERTIES"]['NEW']['VALUE'] == "Y") {
+                    echo '<span class="new sticker">'.$arResult["PROPERTIES"]["NEW"]["NAME"].'</span>';
+                }
+                echo '</div>';
+                ?>
                 <div class="col-sm-9 main_slider">
                     <?
                     foreach ($arResult['VR_PHOTOS']['IMG'] as $key => $img) {
