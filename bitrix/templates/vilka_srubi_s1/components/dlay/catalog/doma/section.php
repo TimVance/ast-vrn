@@ -86,6 +86,15 @@ $this->setFrameMode(true);
     array("HIDE_ICONS" => "Y")
 );?>
 
+<?$APPLICATION->IncludeComponent(
+    "dlay:tags",
+    "",
+    array(
+        "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+        "SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+    )
+);?>
+
 <div class="col-xs-12">
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog.smart.filter",
@@ -121,45 +130,39 @@ $this->setFrameMode(true);
 <?
 
 // Существует ли раздел
-$isSectionFind = false;
+$isTagFind = false;
 $tags_info = array();
-if(!empty($arResult["VARIABLES"]["SECTION_CODE"])):
-    $rsSections = CIBlockSection::GetList(
-            array(),
-            array(
-                'IBLOCK_ID' => $arParams["IBLOCK_ID"],
-                '=CODE' => $arResult["VARIABLES"]["SECTION_CODE"]
-            )
+
+$url = explode("/", $APPLICATION->GetCurPage());
+$section_path = $url[count($url) - 2];
+
+if(!empty($section_path)):
+    $findTags = CIBlockElement::GetList(
+        array(),
+        array(
+            "IBLOCK_ID" => 14,
+            'ACTIVE' => 'Y',
+            'CODE' => $section_path
+        ),
+        false,
+        array(),
+        array(
+            "NAME", "IBLOCK_ID", "ID"
+        )
     );
-    if($rsSections->Fetch()) $isSectionFind = true;
-    else {
-        $isSectionFind = false;
-        $findTags = CIBlockElement::GetList(
-            array(),
-            array(
-                "IBLOCK_ID" => 14,
-                'ACTIVE' => 'Y',
-                'CODE' => $arResult["VARIABLES"]["SECTION_CODE"]
-            ),
-            false,
-            array(),
-            array(
-                "NAME", "IBLOCK_ID", "ID"
-            )
-        );
-        while ($findTag = $findTags->GetNextElement()) {
-            $tags_info = $findTag->GetFields();
-            $tags_info["PROPS"] = $findTag->GetProperties();
-        }
+    while ($findTag = $findTags->GetNextElement()) {
+        $tags_info = $findTag->GetFields();
+        $tags_info["PROPS"] = $findTag->GetProperties();
+        $isTagFind = true;
     }
 endif;
 
 ?>
 
-<? if(!empty($tags_info["NAME"])): ?>
+<? if($isTagFind): ?>
 
     <?
-
+    // Если найден тег
     $section_url = '';
     $url = explode("/", $APPLICATION->GetCurPage());
     $section_path = $url[count($url) - 3];
@@ -286,6 +289,7 @@ endif;
         $APPLICATION->SetTitle($meta_h1);
         $APPLICATION->SetPageProperty("title", $meta_title);
         $APPLICATION->SetPageProperty("description", $meta_desc);
+        $APPLICATION->AddChainItem($tags_info["NAME"]);
 
     ?>
 

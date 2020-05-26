@@ -93,6 +93,34 @@ if($arParams["SEF_MODE"] == "Y")
 			$b404 |= !isset($arVariables["SECTION_CODE"]);
 	}
 
+
+    if($componentPage == "element")
+    {
+        $tags_info = array();
+        if(!empty($arVariables["SECTION_CODE"])):
+            $url = explode("/", $APPLICATION->GetCurPage());
+            $section_path = $url[count($url) - 2];
+            $findTags = CIBlockElement::GetList(
+                array(),
+                array(
+                    "IBLOCK_ID" => 14,
+                    'ACTIVE' => 'Y',
+                    'CODE' => $section_path
+                ),
+                false,
+                array(),
+                array(
+                    "NAME", "IBLOCK_ID", "ID"
+                )
+            );
+            while ($findTag = $findTags->GetNextElement()) {
+                $tags_info = $findTag->GetFields();
+                $tags_info["PROPS"] = $findTag->GetProperties();
+                $componentPage = "section";
+            }
+        endif;
+    }
+
 	if($b404 && CModule::IncludeModule('iblock'))
 	{
 		$folder404 = str_replace("\\", "/", $arParams["SEF_FOLDER"]);
