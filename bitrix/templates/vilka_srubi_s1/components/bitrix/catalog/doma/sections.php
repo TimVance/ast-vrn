@@ -84,13 +84,13 @@ if ($isFilter)
     array("HIDE_ICONS" => "Y")
 );?>
 
-
 <?$APPLICATION->IncludeComponent(
         "dlay:tags",
         "",
         array(
             "IBLOCK_ID" => $arParams["IBLOCK_ID"],
             "SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+            "PAGE" => "katalog"
         )
 );?>
 

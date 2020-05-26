@@ -95,6 +95,7 @@ $this->setFrameMode(true);
     )
 );?>
 
+
 <div class="col-xs-12">
     <?$APPLICATION->IncludeComponent(
         "bitrix:catalog.smart.filter",
