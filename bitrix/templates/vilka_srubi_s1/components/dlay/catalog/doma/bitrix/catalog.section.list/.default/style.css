@@ -1,0 +1,33 @@
+.catalog_section_list {
+  background: #b17853;
+  border: 1px solid #8e5f42;
+  display: table;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.catalog_section_list .item {
+  display: table-cell;
+  text-align: center;
+  padding: 20px 10px 15px;
+  font-family: "pf_beausans_prolight", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 0 #666;
+}
+.catalog_section_list .item:hover {
+  background: #8e5f42;
+  text-decoration: none;
+}
+.catalog_section_list .item span {
+  display: block;
+}
+.catalog_section_list .item img {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .catalog_section_list .item {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+  }
+}
