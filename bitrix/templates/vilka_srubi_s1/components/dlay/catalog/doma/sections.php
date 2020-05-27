@@ -129,8 +129,20 @@ global $USER;
         $component,
         array('HIDE_ICONS' => 'Y')
     );?></div>
-<?
-?>
+<div class="col-md-12">
+    <div class="tags-article">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "",
+                "PATH" => "/include/catalog_desc_top.php"
+            )
+        );?>
+    </div>
+</div>
 <?$intSectionID = 0; ?>
 <?$intSectionID = $APPLICATION->IncludeComponent(
     "bitrix:catalog.section",
@@ -232,3 +244,18 @@ global $USER;
     ),
     $component
 );?>
+
+<div class="col-md-12">
+    <div class="tags-article">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "",
+                "PATH" => "/include/catalog_desc_bottom.php"
+            )
+        );?>
+    </div>
+</div>

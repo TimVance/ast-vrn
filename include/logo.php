@@ -1,0 +1,1 @@
+<img width="144" src="/upload/img/Ресурс%201.png" height="60">

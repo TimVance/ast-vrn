@@ -128,8 +128,18 @@ global $USER;
         $component,
         array('HIDE_ICONS' => 'Y')
     );?></div>
-<?
-?>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:main.include",
+        "",
+        Array(
+            "AREA_FILE_SHOW" => "file",
+            "AREA_FILE_SUFFIX" => "inc",
+            "COMPOSITE_FRAME_MODE" => "A",
+            "COMPOSITE_FRAME_TYPE" => "AUTO",
+            "EDIT_TEMPLATE" => "",
+            "PATH" => "/include/catalog_desc_top.php"
+        )
+    );?>
 <?$intSectionID = 0; ?>
 <?$intSectionID = $APPLICATION->IncludeComponent(
     "bitrix:catalog.section",
@@ -230,4 +240,14 @@ global $USER;
         'COMPARE_PATH' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['compare']
     ),
     $component
+);?>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    "",
+    Array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "/include/catalog_desc_bottom.php"
+    )
 );?>
