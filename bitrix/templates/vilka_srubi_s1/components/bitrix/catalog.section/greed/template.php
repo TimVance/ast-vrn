@@ -24,6 +24,11 @@ $this->setFrameMode(true);
             <?=GetMessage("VR_OUR_PROJ")?>
         </div>
     <?}?>
+        <? if(!empty($arResult['UF_DESC'])): ?>
+            <div class="descr tags-article">
+                <?=htmlspecialchars_decode($arResult['UF_DESC'])?>
+            </div>
+        <? endif; ?>
         <div class="row projects">
             <?
             foreach($arResult["ITEMS"] as $cell=>$arElement){?>

@@ -292,6 +292,12 @@ endif;
         $APPLICATION->SetPageProperty("description", $meta_desc);
         $APPLICATION->AddChainItem($tags_info["NAME"]);
 
+        if(!empty($tags_info["PROPS"]["text_bottom"]["VALUE"]["TEXT"])): ?>
+        <div class="col-md-12">
+            <div class="tags-article"><?=$tags_info["PROPS"]["text_bottom"]["VALUE"]["TEXT"];?></div>
+        </div>
+        <? endif;
+
     ?>
 
 <? else: ?>

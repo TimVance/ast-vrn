@@ -20,3 +20,21 @@ foreach($arResult["ITEMS"] as $k => $arItem){
     $arResult["ITEMS"][$k]['IMG'] = VH::water($file, 300, 249); //BX_RESIZE_IMAGE_PROPORTIONAL
 
 }
+
+$get_fields = CIBlockSection::GetList(
+    array(),
+    array(
+        'IBLOCK_ID' => $arResult['IBLOCK_ID'],
+        'ID' => $arResult['ID']
+    ),
+    false,
+    array(
+        'UF_*'
+    )
+);
+
+if($get_fields_item = $get_fields->GetNext()) {
+
+    $arResult["UF_DESC"] = $get_fields_item["UF_DESC"];
+
+}

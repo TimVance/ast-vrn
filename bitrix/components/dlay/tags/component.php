@@ -4,7 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $tag_iblock = 14;
 
 global $USER;
-if ($USER->getId() == 2):
+if ($USER->getId() == 2 || $USER->getId() == 1):
 
 $sectionInfo = array();
 $SectList = CIBlockSection::GetList(

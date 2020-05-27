@@ -32,7 +32,7 @@ for($index = 0; $index < $itemSize; $index++)
 	$arrow = ($index > 0? '<i class="dev"> / </i>' : '');
 
 
-	//if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1) {
+	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1) {
 		$strReturn .= '
 			<div class="item" id="breadcrumb_'.$index.'" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"'.$child.$nextRef.'>
 				'.$arrow.'
@@ -40,13 +40,13 @@ for($index = 0; $index < $itemSize; $index++)
 					<span itemprop="title">'.$title.'</span>
 				</a>
 			</div>';
-	/*}else{
+	}else{
 		$strReturn .= '
 			<div class="item">
 				'.$arrow.'
 				<span>'.$title.'</span>
 			</div>';
-	}*/
+	}
 }
 
 $strReturn .= '</div>';
