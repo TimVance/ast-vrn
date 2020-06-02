@@ -93,9 +93,7 @@ if (!empty($arTags)) {
 
         if ($findTagId != $tags_info["ID"]) {
             $tags_links[$tags_info["ID"]]["name"] = $tags_info["NAME"];
-            if (!empty($sectionInfo["SECTION_PAGE_URL"]) && empty($arParams["PAGE"]))
-                $tags_links[$tags_info["ID"]]["link"] = $sectionInfo["SECTION_PAGE_URL"] . $tags_info["CODE"] . "/";
-            else $tags_links[$tags_info["ID"]]["link"] = '/katalog/'.$tags_info["CODE"] . "/";
+            $tags_links[$tags_info["ID"]]["link"] = '/katalog/'.$tags_info["CODE"] . "/";
         }
     }
 
