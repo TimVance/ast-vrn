@@ -12,6 +12,8 @@
 .tags-list a {
     border: 1px solid #e76832;
     padding: 5px 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
     border-radius: 4px;
     text-decoration: none;
     -webkit-transition: all .3s;
@@ -19,6 +21,7 @@
     -ms-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    display: inline-block;
 }
 .tags-list a:hover {
     color: #fff;
