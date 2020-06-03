@@ -94,7 +94,7 @@ if($arParams["SEF_MODE"] == "Y")
 	}
 
 
-    if($componentPage == "element")
+    if($componentPage == "element" && false)
     {
         $tags_info = array();
         if(!empty($arVariables["SECTION_CODE"])):
