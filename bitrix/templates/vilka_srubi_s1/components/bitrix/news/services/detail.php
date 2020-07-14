@@ -50,6 +50,31 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
+<?$APPLICATION->IncludeComponent(
+	"vilka:feedback", 
+	"bootstrap", 
+	array(
+		"COMPONENT_TEMPLATE" => "bootstrap",
+		"IBLOCK_TYPE" => "vilka_feedback",
+		"IBLOCK_ID" => "15",
+		"USE_CAPTCHA" => "Y",
+		"OK_TEXT" => GetMessage("FORM_SPASIBO"),
+		"MAIL_TITLE" => GetMessage("FORM_RASCH")." ".$_SERVER["HTTP_HOST"],
+		"EMAIL_TO" => COption::GetOptionString("main","email_from"),
+		"FORM_ID" => "service_order",
+		"USER_NAME" => "-",
+		"USER_MAIL" => "-",
+		"USER_PHONE" => "-",
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+);?>
     </div>
     <div class="col-md-4">
         <?$APPLICATION->IncludeComponent("bitrix:menu", "serv_menu", Array(

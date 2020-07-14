@@ -120,7 +120,7 @@ IncludeTemplateLangFile(__FILE__);
 
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script async type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -137,9 +137,7 @@ IncludeTemplateLangFile(__FILE__);
 
 
 
-<div class="marquiz__container">
-  <a class="marquiz__button marquiz__button_blicked marquiz__button_rounded marquiz__button_shadow marquiz__button_fixed marquiz__button_fixed-left" href="#popup:marquiz_5e39866e8d9b0700440d60fd" data-fixed-side="left" data-alpha-color="rgba(248, 110, 1, 0.5)" data-color="#f86e01" data-text-color="#ffffff">Получить скидку</a>
-</div>
+
 
 </body>
 </html>
