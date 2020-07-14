@@ -17,6 +17,10 @@
 .vilka_feedback.service_order {
     max-width: 400px;
     margin-bottom: 40px;
+    border: 1px solid #ccc;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    background-color: #fff;
 }
 
 .vilka_feedback.service_order h2 {

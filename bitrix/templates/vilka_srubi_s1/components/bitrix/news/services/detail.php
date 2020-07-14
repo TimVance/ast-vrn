@@ -50,31 +50,6 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
-<?$APPLICATION->IncludeComponent(
-	"vilka:feedback", 
-	"bootstrap", 
-	array(
-		"COMPONENT_TEMPLATE" => "bootstrap",
-		"IBLOCK_TYPE" => "vilka_feedback",
-		"IBLOCK_ID" => "15",
-		"USE_CAPTCHA" => "Y",
-		"OK_TEXT" => GetMessage("FORM_SPASIBO"),
-		"MAIL_TITLE" => GetMessage("FORM_RASCH")." ".$_SERVER["HTTP_HOST"],
-		"EMAIL_TO" => COption::GetOptionString("main","email_from"),
-		"FORM_ID" => "service_order",
-		"USER_NAME" => "-",
-		"USER_MAIL" => "-",
-		"USER_PHONE" => "-",
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
-	),
-	false
-);?>
     </div>
     <div class="col-md-4">
         <?$APPLICATION->IncludeComponent("bitrix:menu", "serv_menu", Array(
@@ -89,6 +64,28 @@ $this->setFrameMode(true);
             "USE_EXT" => "Y",
             "DELAY" => "N",
             "ALLOW_MULTI_SELECT" => "N",
+        ),
+            false
+        );?>
+        <?$APPLICATION->IncludeComponent("vilka:feedback", "service_order", Array(
+            "COMPONENT_TEMPLATE" => "bootstrap",
+            "IBLOCK_TYPE" => "vilka_feedback",	// Тип инфоблока
+            "IBLOCK_ID" => "15",	// Инфоблок
+            "USE_CAPTCHA" => "Y",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
+            "OK_TEXT" => GetMessage("FORM_SPASIBO"),	// Сообщение, выводимое пользователю после отправки
+            "MAIL_TITLE" => GetMessage("FORM_RASCH")." ".$_SERVER["HTTP_HOST"],	// Письмо с сайта
+            "EMAIL_TO" => COption::GetOptionString("main","email_from"),	// E-mail, на который будет отправлено письмо
+            "FORM_ID" => "service_order",	// Уникальный ID формы
+            "USER_NAME" => "-",	// Имя пользователя
+            "USER_MAIL" => "-",	// E-mail пользователя
+            "USER_PHONE" => "-",	// Телефон пользователя
+            "AJAX_MODE" => "Y",	// Включить режим AJAX
+            "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+            "AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+            "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+            "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+            "COMPOSITE_FRAME_MODE" => "A",	// Голосование шаблона компонента по умолчанию
+            "COMPOSITE_FRAME_TYPE" => "AUTO",	// Содержимое компонента
         ),
             false
         );?>
