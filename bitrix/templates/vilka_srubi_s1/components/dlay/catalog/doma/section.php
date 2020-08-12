@@ -174,10 +174,10 @@ endif;
     );
 
     ?>
-
+    <?php// print_r($tags_info); ?>
     <? if(!empty($tags_info["PROPS"]["text"]["VALUE"]["TEXT"])): ?>
         <div class="col-md-12">
-            <div class="tags-article"><?=$tags_info["PROPS"]["text"]["VALUE"]["TEXT"];?></div>
+            <div class="tags-article"><?=html_entity_decode($tags_info["PROPS"]["text"]["VALUE"]["TEXT"]);?></div>
         </div>
     <? endif; ?>
 
@@ -294,7 +294,7 @@ endif;
 
         if(!empty($tags_info["PROPS"]["text_bottom"]["VALUE"]["TEXT"])): ?>
         <div class="col-md-12">
-            <div class="tags-article"><?=$tags_info["PROPS"]["text_bottom"]["VALUE"]["TEXT"];?></div>
+            <div class="tags-article"><?=html_entity_decode($tags_info["PROPS"]["text_bottom"]["VALUE"]["TEXT"]);?></div>
         </div>
         <? endif;
 
